@@ -1,4 +1,5 @@
 import CharCard from "../CharCard";
+import "./style.css";
 
 const Characters = ({ characters }) => {
   return (

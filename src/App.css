@@ -10,3 +10,7 @@ body {
   min-height: 100vh;
   background: radial-gradient(#777, #222);
 }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
