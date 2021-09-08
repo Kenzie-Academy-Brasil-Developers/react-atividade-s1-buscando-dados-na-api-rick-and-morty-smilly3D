@@ -1,0 +1,102 @@
+/* img {
+  display: none;
+} */
+
+.card {
+  margin: 2%;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  top: -160px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 460px;
+  height: 460px;
+  background: rgb(104, 34, 34);
+  clip-path: circle();
+}
+
+.circle::before {
+  content: "";
+  top: -10px;
+  left: -18px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.circle .imgBx {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 300px;
+  background-color: violet;
+}
+
+.circle .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Alive::before {
+  box-shadow: 0 0 0 20px rgba(0, 255, 0, 1);
+}
+
+.Dead::before {
+  box-shadow: 0 0 0 20px rgba(255, 0, 0, 1);
+}
+
+.unknown::before {
+  box-shadow: 0 0 0 20px rgb(0, 0, 255, 1);
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  padding: 20px 30px;
+}
+content h3 {
+  font-size: 1.4em;
+}
+.textStatus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textStatus .Alive {
+  color: rgba(0, 255, 0, 1);
+}
+
+.textStatus .Dead {
+  color: rgba(255, 0, 0, 1);
+}
+
+.textStatus .unknown {
+  color: rgba(0, 0, 255, 1);
+}
+
+h4 {
+  margin-top: 7px;
+  font-weight: 400;
+  color: rgb(62, 62, 68);
+}
